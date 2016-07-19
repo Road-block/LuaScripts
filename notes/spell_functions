@@ -1,0 +1,37 @@
+/*
+    Shadowforge Lua Functions
+    Spells
+*/
+
+//======================================
+// Helper Functions
+//======================================
+Integer SpellEntry:GetSpellId()
+- N/A
+
+Boolean Boolean SpellEntry:HasMechanic(a1)
+- a1: Mechanic          (Required)  (integer)
+
+SpellEntry:HasAttribute(a1)
+- a1: Attribute         (Required)  (integer)
+
+Boolean SpellEntry:HasAttributeB(a1)
+- a1: AttributeB        (Required)  (integer)
+
+Boolean SpellEntry:HasAttributeC(a1)
+- a1: AttributeB        (Required)  (integer)
+
+Boolean SpellEntry:HasAttributeD(a1)
+- a1: AttributeB        (Required)  (integer)
+
+Boolean SpellEntry:IsHealingSpell()
+- N/A
+
+Boolean SpellEntry:IsEnergizingSpell()
+- N/A
+
+Boolean SpellEntry:IsDispelSpell()
+- N/A
+
+Boolean SpellEntry:DoesSpellCompleteQuest(a1)
+- a1: Quest Id          (Required)  (integer)

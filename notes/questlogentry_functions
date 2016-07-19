@@ -1,0 +1,30 @@
+/*
+    Shadowforge Lua Functions
+    QuestLogEntry
+*/
+
+//======================================
+// Commands
+//======================================
+Void QuestLogEntry:AddKill(a1, b2)
+- a1: SlotId            (Required)  (integer)
+- b2: Guid              (Required)  (integer)
+
+Void QuestLogEntry:AddSpellCast(a1, b2)
+- a1: SlotId            (Required)  (integer)
+- b2: Guid              (Required)  (integer)
+
+Void QuestLogEntry:SendQuestComplete()
+- N/A
+
+Void QuestLogEntry:UpdatePlayerFields()
+- N/A
+
+Void QuestLogEntry:SendUpdateScriptComplete()
+- N/A
+
+Boolean QuestLogEntry:CanBeFinished()
+- N/A
+
+Void QuestLogEntry:Finish()
+- N/A

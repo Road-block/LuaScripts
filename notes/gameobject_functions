@@ -1,0 +1,101 @@
+/*
+    Shadowforge Lua Functions
+    GameObjects
+*/
+
+//======================================
+// Helpers
+//======================================
+Float GameObject:GetPosX()
+- N/A
+
+Float GameObject:GetPosY()
+- N/A
+
+Float GameObject:GetPosZ()
+- N/A
+
+Float GameObject:GetPosO()
+- N/A
+
+Integer GameObject:GetMapId()
+- N/A
+
+Integer GameObject:GetGuid()
+- N/A
+
+Void GameObject:SetState(a1)
+- a1: State             (Required)  (integer)
+
+Integer GameObject:GetState()
+- N/A
+
+Void GameObject:SetScale(a1)
+- a1: Scale             (Required)  (integer)
+
+Integer GameObject:GetScale()
+- N/A
+
+Void GameObject:SetAnimProgress(a1)
+- a1: AnimProgress      (Required)  (integer)
+
+Integer GameObject:GetAnimProgress()
+- N/A
+
+Void GameObject:SetFlags(a1)
+- a1: Flags             (Required)  (integer)
+
+Integer GameObject:GetFlags()
+- N/A
+
+Void GameObject:SetType(a1)
+- a1: Type              (Required)  (integer)
+
+Integer GameObject:GetType()
+- N/A
+
+Void GameObject:SetLevel(a1)
+- a1: Level             (Required)  (integer)
+
+Integer GameObject:GetLevel()
+- N/A
+
+Void GameObject:SetFaction(a1)
+- a1: Faction           (Required)  (integer)
+
+Integer GameObject:GetFaction()
+- N/A
+
+Void GameObject:SetDisplayId(a1)
+- a1: DisplayId         (Required)  (integer)
+
+Integer GameObject:GetDisplayId()
+- N/A
+
+Void GameObject:SetDynamicFlags(a1)
+- a1: DynamicFlags      (Required)  (integer)
+
+Integer GameObject:GetDynamicFlags()
+- N/A
+
+
+//======================================
+// Other
+//======================================
+Void GameObject:Despawn(a1, b2)
+- a1: Delay             (Required)  (integer)
+- b2: RespawnTime       (Required)  (integer)
+
+Void GameObject:CastSpellOnTarget(a1, b2, c3)
+- a1: Target            (Required)  (pointer)
+- b2: SpellId           (Required)  (integer)
+- c3: Triggered         (Required)  (boolean)
+
+Void GameObject:CastSpellAtPosition(a1, b2, c3, d4, e5, f6)
+- a1: SpellId           (Required)  (integer)
+- b2: IsDestination     (Required)  (boolean)
+ - d4: X Position       (Required)  (float)
+ - e5: Y Position       (Required)  (float)
+ - f6: Z Position       (Required)  (float)
+- c3: Triggered         (Required)  (boolean)
+

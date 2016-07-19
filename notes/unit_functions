@@ -1,0 +1,352 @@
+/*
+    Shadowforge Lua Functions
+    Unit and Player
+*/
+
+//======================================
+// Chat Functions
+//======================================
+Void Unit:SendScriptTextById(a1, b2)                (Creatures and Players)
+- a1: TextType          (Required)  (integer)
+- b2: TextId            (Required)  (integer)
+
+Void Unit:SendScriptTextToPlayerById(a1, b2, c3)    (Creatures and Players)
+- a1: Player Target     (Required)  (pointer)
+- b2: TextType          (Required)  (integer)
+- c3: TextId            (Required)  (integer)
+
+Void Unit:SendScriptTextWithTarget(a1, b2, c3)      (Creatures and Players)
+- a1: Player Target     (Required)  (pointer)
+- b2: TextType          (Required)  (integer)
+- c3: TextId            (Required)  (integer)
+
+Void Unit:SendEmoteToPlayer(a1, b2)                 (Creatures Only)
+- a1: Player Target     (Required)  (pointer)
+- b2: EmoteId           (Required)  (integer)
+
+Void Unit:SetEmoteState(a1)                         (Creatures Only)
+- a1: EmoteId           (Required)  (integer)
+
+Void Unit:SendEmote(a1)                             (Creatures and Players)
+- b2: EmoteId           (Required)  (integer)
+
+Void Unit:SetGossipText(a1)                         (Creatures Only)
+- a1: TextId            (Required)  (integer)
+
+//======================================
+// Spell Functions
+//======================================
+Void Unit:CastSpell(a1, b2, c3)                     (Creatures Only)
+- a1: Target            (Required)  (pointer)
+- b2: SpellId           (Required)  (integer)
+- c3: Triggered         (Required)  (boolean)
+
+Void Unit:ForceCastSpell(a1, b2, c3, d4)            (Creatures Only)
+- a1: Target            (Required)  (pointer)
+- b2: SpellId           (Required)  (integer)
+- c3: Triggered         (Required)  (boolean)
+- d4: Status            (Required)  (integer)
+
+Void Unit:AddAura(a1)                               (Creatures and Players)
+- a1: SpellId           (Required)  (integer)
+
+Void Unit:RemoveAura(a1)                            (Creatures and Players)
+- a1: SpellId           (Required)  (integer)
+
+Integer Unit:GetAuraById(a1)                        (Creatures and Players)
+- a1: SpellId           (Required)  (integer)
+
+Integer Unit:GetAuraBySlot(a1)                      (Creatures and Players)
+- a1: SlotId            (Required)  (integer)
+
+Void Unit:RemoveAllNegativeAuras()                  (Creatures and Players)
+- N/A
+
+Void Unit:RemoveAllNonPassiveAuras()                (Creatures and Players)
+- N/A
+
+
+//======================================
+// Field Calling Functions
+//======================================
+Integer Unit:GetHealthPct()                         (Creatures and Players)
+- N/A
+
+Void Unit:SetHealthPct()                            (Creatures and Players)
+- a1: HealthPct         (Required)  (integer)
+
+Integer Unit:GetManaPct()                           (Creatures and Players)
+- N/A
+
+Void Unit:SetManaPct()                              (Creatures and Players)
+- a1: ManaPct           (Required)  (integer)
+
+Boolean Unit:IsPlayer()                             (Creatures and Players)
+- N/A
+
+Boolean Unit:IsCreature()                           (Creatures and Players)
+- N/A
+
+Void Unit:SetUnitFlags()                            (Creatures and Players)
+- a1: Flags             (Required)  (integer)
+
+Void Unit:SetPlayerFlags()                          (Players Only)
+- a1: Flags             (Required)  (integer)
+
+Void Unit:SetNpcFlags()                             (Creatures Only)
+- a1: Flags             (Required)  (integer)
+
+Void Unit:SetDynamicFlags()                         (Creatures Only)
+- a1: Flags             (Required)  (integer)
+
+Void Unit::SetStandState(a1)
+- a1: StandState        (Required)  (integer)
+
+Integer Unit:GetGuid()                              (Creatures and Players)
+- N/A
+
+Integer Unit:GetRace()                              (Players Only)
+- N/A
+
+Integer Unit:GetClass()                             (Players Only)
+- N/A
+
+Integer Unit:GetLevel()                             (Creatures and Players)
+- N/A
+
+
+//======================================
+// Movement Calling Functions
+//======================================
+Integer Unit:GetPosX()                              (Creatures and Players)
+- N/A
+
+Integer Unit:GetPosY()                              (Creatures and Players)
+- N/A
+
+Integer Unit:GetPosZ()                              (Creatures and Players)
+- N/A
+
+Integer Unit:GetPosO()                              (Creatures and Players)
+- N/A
+
+Integer Unit:GetMapId()                             (Creatures and Players)
+- N/A
+
+Integer Unit:GetMapId()                             (Creatures and Players)
+- N/A
+
+Void Unit:PushRandomMovement(a1)                    (Creatures Only)
+- a1: Spread Distance   (Required)  (integer)
+
+Void Unit:PushWaypointMovement(a1)                  (Creatures Only)
+- a1: Path Id from DB   (Required)  (integer)
+
+Void Unit:MoveToLocation(a1, b2, c3, d4,
+                    e5, f6, g7, h8)                 (Creatures Only)
+- a1: X Position        (Required)  (float)
+- b2: Y Position        (Required)  (float)
+- c3: Z Position        (Required)  (float)
+- d4: Orientation       (Required)  (float)
+- e5: Is Running        (Required)  (boolean)
+- f6: Force Destination (Required)  (boolean)
+- g7: Is Straight Path  (Required)  (boolean)
+- h8: Store Position    (Required)  (boolean)
+
+Void Unit:SetRandomMovementSpeed(a1)                (Creatures Only)
+- a1: Speed             (Required)  (float)
+
+Void Unit:ResetMovement()                           (Creatures and Players)
+- N/A
+
+Void Unit:StopMovement()                            (Creatures and Players)
+- N/A
+
+Float Unit:GetDistanceFromObject(a1)                (Creatures and Players)
+- a1: Object Target     (Required)  (pointer)
+
+Float Unit:GetDistanceFromPosition(a1, b2, c3)      (Creatures and Players) 
+- a1: X Position        (Required)  (float)
+- b2: Y Position        (Required)  (float)
+- c3: Z Position        (Required)  (float)
+
+Boolean Unit:IsObjectInLineOfSight(a1)              (Creatures and Players)
+- a1: Object Target     (Required)  (pointer)
+
+Boolean Unit:IsPositionInLineOfSight(a1, b2, c3)    (Creatures and Players) 
+- a1: X Position        (Required)  (float)
+- b2: Y Position        (Required)  (float)
+- c3: Z Position        (Required)  (float)
+
+
+//======================================
+// Quests Calling Functions
+//======================================
+Boolean Unit:HasQuest(a1)                           (Players Only)
+- a1: Quest Id          (Required)  (integer)
+
+Boolean Unit:CanBeFinished(a1)                      (Players Only)
+- a1: Quest Id          (Required)  (integer)
+
+Pointer Unit:GetQuestLogEntry(a1)                   (Players Only)
+- a1: Quest Id          (Required)  (integer)
+
+
+//======================================
+// Script Calling Functions
+//======================================
+Integer Unit:GetDisplay()                           (Creatures and Players)
+- N/A
+
+Void Unit:SetDisplay(a1)                            (Creatures and Players)
+- a1: Display Id        (Required)  (integer)
+
+Integer Unit:GetNativeDisplay()                     (Creatures and Players)
+- N/A
+
+Void Unit:SetInvisible(a1)                          (Creatures Only)
+- a1: Enable            (Required)  (boolean)
+
+Void Unit:SetInvincible(a1)                         (Creatures Only)
+- a1: Enable            (Required)  (boolean)
+
+Void Unit:Despawn(a1, b2)                           (Creatures Only)
+- a1: Delay Time        (Required)  (integer)
+- a1: Respawn Time      (Required)  (integer)
+
+Void Unit:PlaySoundToSet(a1)                        (Creatures and Players)
+- a1: Sound Id          (Required)  (integer)
+
+Void Unit:PlaySoundToPlayer(a1, b2)                 (Creatures and Players)
+- a1: Player Target     (Required)  (pointer)
+- b2: Sound Id          (Required)  (integer)
+
+Pointer Unit:GetScriptedPlayerTarget()              (Creatures Only)
+- N/A
+
+Void Unit:SetScriptedPlayerTarget(a1)               (Creatures Only)
+- a1: Player Target     (Required)  (pointer)
+
+Pointer Unit:GetScriptedUnitTarget()                (Creatures Only)
+- N/A
+
+Void Unit:SetScriptedUnitTarget(a1)                 (Creatures Only)
+- a1: Player Target     (Required)  (pointer)
+
+Void Unit:SetTemporaryFaction()                     (Creatures and Players)
+- a1: Faction           (Required)  (integer)
+
+Void Unit:ClearTemporaryFaction()                   (Creatures and Players)
+- N/A
+
+Void Unit:AddCreatureForQuest(a1, b2)               (Players Only)
+- a1: Quest Id          (Required)  (integer)
+- b2: Unit Guid         (Required)  (integer)
+
+Void Unit:RemoveCreatureForQuest(a1)                (Players Only)
+- a1: Quest Id          (Required)  (integer)
+
+Void Unit:SetCharmedBy(a1)                          (Creatures and Players)
+- a1: Unit Target       (Required)  (pointer)
+
+Void Unit:RemoveCharmedBy()                         (Creatures and Players)
+- N/A
+
+Pointer Unit:SpawnCreatureAtObject(a1, b2)          (Creatures and Players)
+- a1: Creature Entry    (Required)  (integer)
+- b2: Object Target     (Required)  (pointer)
+
+Pointer Unit:SpawnCreatureAtPosition(a1, b2, c3, 
+                                d4, e5)             (Creatures and Players)
+- a1: Creature Entry    (Required)  (integer)
+- b2: X Position        (Required)  (float)
+- c3: Y Position        (Required)  (float)
+- d4: Z Position        (Required)  (float)
+- e5: Orientation       (Required)  (float)
+
+Pointer Unit:SpawnGameObjectAtObject(a1, b2, c3)    (Creatures and Players)
+- a1: Object Entry      (Required)  (integer)
+- b2: Object Target     (Required)  (pointer)
+- c3: Scale             (Required)  (float)
+
+Pointer Unit:SpawnGameObjectAtPosition(a1, b2, c3, 
+                               d4, e5, f6)          (Creatures and Players)
+- a1: Object Entry      (Required)  (integer)
+- b2: X Position        (Required)  (float)
+- c3: Y Position        (Required)  (float)
+- d4: Z Position        (Required)  (float)
+- e5: Orientation       (Required)  (float)
+- f6: Scale             (Required)  (Float) 
+
+Void Unit:InitNewAIType(a1, b2, c3)                 (Creatures and Players)
+- a1: Unit Target       (Required)  (pointer)
+- b2: AI Type           (Required)  (integer)
+- c3: AI Mode           (Required)  (integer)
+
+
+//======================================
+// AI Calling Functions
+//======================================
+Void Unit:SetSheathState(a1)                        (Creatures Only)
+- a1: Sheath State     (Required)  (integer)
+
+Void Unit:SetSheathType(a1)                         (Creatures Only)
+- a1: Sheath Type      (Required)  (integer)
+
+Pointer Unit:FindClosestLivingPlayer()              (Creatures Only)
+- N/A
+
+Pointer Unit:FindClosestCreature(a1)                (Creatures Only)
+- a1: Creature Entry   (Required)  (integer)
+
+Pointer Unit:FindClosestLivingCreature(a1)          (Creatures Only)
+- a1: Creature Entry   (Required)  (integer)
+
+Pointer Unit:FindClosestGameObject(a1)              (Creatures Only)
+- a1: Object Entry     (Required)  (integer)
+
+Void Unit:EnterEvadeMode()                          (Creatures Only)
+- N/A
+
+Void Unit:CreateTimer(a1, b2)                       (Creatures Only)
+- a1: Timer Name       (Required)  (string)
+- a1: Timer Length     (Required)  (integer)
+
+Void Unit:UpdateTimers(a1)                          (Creatures Only)
+- a1: Time Difference  (Required)  (integer)
+
+Boolean Unit:IsTimerFinished(a1)                    (Creatures Only)
+- a1: Timer Name       (Required)  (string)
+
+Void Unit:RemoveTimer(a1)                           (Creatures Only)
+- a1: Timer Name       (Required)  (string)
+
+Void Unit:ResetTimer(a1, b2)                        (Creatures Only)
+- a1: Timer Name       (Required)  (string)
+- a1: Timer Length     (Required)  (integer)
+
+Void Unit:SetUnitToFollow(a1, b2, c3)               (Creatures and Players)
+- a1: Unit Target      (Required)  (pointer)
+- b2: Distance         (Required)  (Float) 
+- c3: Angle            (Required)  (Float) 
+
+Void Unit:SetCanMove(a1)                            (Creatures and Players)
+- a1: Disable          (Required)  (boolean)
+
+Void Unit:SetDisableMelee(a1)                       (Creatures and Players)
+- a1: Disable          (Required)  (boolean)
+
+Void Unit:SetCanEnterCombat(a1)                     (Creatures and Players)
+- a1: Enable           (Required)  (boolean)
+
+Void Unit:FaceTarget(a1)                            (Creatures and Players)
+- a1: Unit Target      (Required)  (pointer)
+
+Void Unit:SetFacing(a1)                             (Creatures and Players)
+- c3: Orientation      (Required)  (Float) 
+
+Void Unit:DisableAI()                               (Creatures and Players)
+- N/A
+
+Void Unit:EnableAI()                                (Creatures and Players)
+- N/A
