@@ -3,6 +3,8 @@
 
 #### 1a. Faction (A|H|AH)
 
+#### 1b. Min Level
+
 ### 2. QuestId - QuestName
 
 #### 2a. Links
