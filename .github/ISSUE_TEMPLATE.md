@@ -1,6 +1,7 @@
 
 ### 1. Continent - Zone
 
+#### 1a. Faction (A|H|AH)
 
 ### 2. QuestId - QuestName
 
