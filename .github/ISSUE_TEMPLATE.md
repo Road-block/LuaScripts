@@ -1,14 +1,16 @@
 
-### NPCId: 
+### 1. Continent - Zone
 
 
+### 2. QuestId - QuestName
 
-### QuestId:
-
-
-
-### Location:
+#### 2a. Links
 
 
+### 3. Playbook
 
-### Description: 
+
+### 4. Verification
+
+#### 4a. Video
+#### 4b. Data
