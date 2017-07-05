@@ -1,5 +1,5 @@
 --[[
-    Jadefire Lua Scripts
+    Benediction Lua Scripts
     Creature 2706 - Tor'gan
     Developed by Rodeg
 --]]

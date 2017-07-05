@@ -1,5 +1,5 @@
 --[[
-    Jadefire Lua Scripts
+    Benediction Lua Scripts
     Creature 5202 - Archery Target
     Developed by Asura
 --]]

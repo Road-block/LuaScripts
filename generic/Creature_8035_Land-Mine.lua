@@ -1,5 +1,5 @@
 --[[
-    Jadefire Lua Scripts
+    Benediction Lua Scripts
     Creature 8035 - Land Mine
     Developed by Asura
 --]]

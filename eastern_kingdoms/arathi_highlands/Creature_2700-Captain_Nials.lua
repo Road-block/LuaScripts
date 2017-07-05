@@ -1,5 +1,5 @@
 --[[
-    Jadefire Lua Scripts
+    Benediction Lua Scripts
     Creature 2700 - Captain Nials
     Developed by Rodeg
 --]]
