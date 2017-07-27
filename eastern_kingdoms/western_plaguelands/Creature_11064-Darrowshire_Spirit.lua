@@ -1,5 +1,5 @@
 --[[
-    Jadefire Lua Scripts
+    Benediction Lua Scripts
     Creature 11064 - Darrowshire Spirit
     Developed by Asura
 --]]

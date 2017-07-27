@@ -1,5 +1,5 @@
 --[[
-    Jadefire Lua Scripts
+    Benediction Lua Scripts
     Quest 9364 - Fragmented Magic
     Developed by Asura
 --]]

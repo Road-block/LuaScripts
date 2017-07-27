@@ -1,5 +1,5 @@
 --[[
-    Jadefire Lua Scripts
+    Benediction Lua Scripts
     Creature 197 - Marshal McBride
     Developed by Asura
 --]]

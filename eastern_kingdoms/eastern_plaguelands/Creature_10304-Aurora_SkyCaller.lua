@@ -1,5 +1,5 @@
 --[[
-    Jadefire Lua Scripts
+    Benediction Lua Scripts
     Quest 10304 - Aurora Skycaller
     Developed by Rodeg
 --]]

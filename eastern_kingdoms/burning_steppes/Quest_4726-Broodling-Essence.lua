@@ -1,5 +1,5 @@
 --[[
-    Jadefire Lua Scripts
+    Benediction Lua Scripts
     Quest 4726 - Broodling Essence
     Developed by Asura
 --]]

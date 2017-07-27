@@ -283,6 +283,18 @@ Void Unit:InitNewAIType(a1, b2, c3)                 (Creatures and Players)
 - b2: AI Type           (Required)  (integer)
 - c3: AI Mode           (Required)  (integer)
 
+Void Unit:StartCombat(a1)                           (Creatures Only)
+- a1: Unit Target       (Required)  (pointer)
+
+Void Unit:SetScriptPhase(a1)                        (Creatures Only)
+- a1: Phase Id          (Required)  (integer)
+
+Integer Unit:GetScriptPhase()                       (Creatures Only)
+- N/A
+
+Boolean Unit:IsScriptPhase(a1)                      (Creatures Only)
+- a1: Phase Id          (Required)  (integer)
+
 
 //======================================
 // AI Calling Functions
@@ -349,4 +361,13 @@ Void Unit:DisableAI()                               (Creatures and Players)
 - N/A
 
 Void Unit:EnableAI()                                (Creatures and Players)
+- N/A
+
+Void Unit:Root()                                    (Creatures and Players)
+- N/A
+
+Void Unit:Unroot()                                  (Creatures and Players)
+- N/A
+
+Void Unit:Suicide()                                 (Creatures and Players)
 - N/A
